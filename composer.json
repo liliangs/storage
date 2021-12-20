@@ -1,0 +1,41 @@
+{
+    "name": "liliangs/storage",
+    "description": "个人使用，储存库",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Liliangs",
+            "email":"1064688548@qq.com"
+        }
+    ],
+    "require": {
+        "php":">=7.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-simplexml": "*",
+        "guzzlehttp/guzzle": "^6.2.1 || ^7.0",
+        "guzzlehttp/guzzle-services": "^1.1",
+        "guzzlehttp/psr7": "^1.3.1 || ^2.0"
+    },
+    "require-dev" : {
+        "phpunit/phpunit": "*",
+        "satooshi/php-coveralls": "*"
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "lstore\\Service"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Lstore\\": "src"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    }
+}
